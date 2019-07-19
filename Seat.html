@@ -1,0 +1,382 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Show Time </title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="css/orman.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+<link href="Seat.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="Seat.js"></script>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+
+
+</head>
+
+<body oncontextmenu="return false">
+
+<div id="templatemo_wrapper_h">
+<div id="templatemo_header_wh">
+	<div id="templatemo_header" class="header_home">
+    	<div id="site_title"><a href="#">Online Shopping</a></div>
+        <div id="templatemo_menu" class="ddsmoothmenu">
+            <ul>
+                <li><a href="index.html" class="selected">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+               
+            </ul>
+            <div id="templatemo_search">
+                <form action="#" method="get">
+                  	<input type="text" value="Site Search" name="keyword" id="keyword" title="keyword" 
+                  			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                  	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
+                </form>
+            </div>
+            <br style="clear: left" />
+
+
+        </div> <!-- end of templatemo_menu -->
+
+        
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>Example</strong> caption with <a href="http://dev7studios.com" rel="nofollow">a credit link</a> for <em>this slider</em>.
+            </div>
+        </div> 
+		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+        <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+				controlNav:false
+			});
+        });
+        </script>
+    </div> <!-- END of header -->
+</div> <!-- END of header wrapper -->
+<body onload="onLoaderFunc()">
+
+<div class="inputForm">
+<center>
+  Name *: <input type="text" id="Username" required>
+  Number of Seats *: <input type="number" id="Numseats" required>
+  <br/><br/>
+  <button onclick="takeData()">Start Selecting</button>
+</center>
+</div>
+  
+
+<div class="seatStructure">
+<center>
+  
+<table id="seatsBlock">
+ <p id="notification"></p>
+  <tr>
+    <td colspan="14"><div class="screen">SCREEN</div></td>
+    <td rowspan="20">
+      <div class="smallBox greenBox">Selected Seat</div> <br/>
+      <div class="smallBox redBox">Reserved Seat</div><br/>
+      <div class="smallBox emptyBox">Empty Seat</div><br/>
+    </td>
+    
+    <br/>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td></td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+</tr>
+  
+<tr>
+    <td>A</td>
+    <td><input type="checkbox" class="seats" value="A1"></td>
+    <td><input type="checkbox" class="seats" value="A2"></td>
+    <td><input type="checkbox" class="seats" value="A3"></td>
+    <td><input type="checkbox" class="seats" value="A4"></td>
+    <td><input type="checkbox" class="seats" value="A5"></td>
+    <td class="seatGap"></td>
+    <td><input type="checkbox" class="seats" value="A6"></td>
+    <td><input type="checkbox" class="seats" value="A7"></td>
+    <td><input type="checkbox" class="seats" value="A8"></td>
+    <td><input type="checkbox" class="seats" value="A9"></td>
+    <td><input type="checkbox" class="seats" value="A10"></td>
+    <td><input type="checkbox" class="seats" value="A11"></td>
+    <td><input type="checkbox" class="seats" value="A12"></td>
+  </tr>
+  
+  <tr>
+    <td>B</td>
+    <td><input type="checkbox" class="seats" value="B1"></td>
+    <td><input type="checkbox" class="seats" value="B2"></td>
+    <td><input type="checkbox" class="seats" value="B3"></td>
+    <td><input type="checkbox" class="seats" value="B4"></td>
+    <td><input type="checkbox" class="seats" value="B5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="B6"></td>
+    <td><input type="checkbox" class="seats" value="B7"></td>
+    <td><input type="checkbox" class="seats" value="B8"></td>
+    <td><input type="checkbox" class="seats" value="B9"></td>
+    <td><input type="checkbox" class="seats" value="B10"></td>
+    <td><input type="checkbox" class="seats" value="B11"></td>
+    <td><input type="checkbox" class="seats" value="B12"></td>
+  </tr>
+  
+  <tr>
+    <td>C</td>
+    <td><input type="checkbox" class="seats" value="C1"></td>
+    <td><input type="checkbox" class="seats" value="C2"></td>
+    <td><input type="checkbox" class="seats" value="C3"></td>
+    <td><input type="checkbox" class="seats" value="C4"></td>
+    <td><input type="checkbox" class="seats" value="C5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="C6"></td>
+    <td><input type="checkbox" class="seats" value="C7"></td>
+    <td><input type="checkbox" class="seats" value="C8"></td>
+    <td><input type="checkbox" class="seats" value="C9"></td>
+    <td><input type="checkbox" class="seats" value="C10"></td>
+    <td><input type="checkbox" class="seats" value="C11"></td>
+    <td><input type="checkbox" class="seats" value="C12"></td>
+</tr>
+  
+<tr>
+    <td>D</td>
+    <td><input type="checkbox" class="seats" value="D1"></td>
+    <td><input type="checkbox" class="seats" value="D2"></td>
+    <td><input type="checkbox" class="seats" value="D3"></td>
+    <td><input type="checkbox" class="seats" value="D4"></td>
+    <td><input type="checkbox" class="seats" value="D5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="D6"></td>
+    <td><input type="checkbox" class="seats" value="D7"></td>
+    <td><input type="checkbox" class="seats" value="D8"></td>
+    <td><input type="checkbox" class="seats" value="D9"></td>
+    <td><input type="checkbox" class="seats" value="D10"></td>
+    <td><input type="checkbox" class="seats" value="D11"></td>
+    <td><input type="checkbox" class="seats" value="D12"></td>
+</tr>
+  
+<tr>
+    <td>E</td>
+    <td><input type="checkbox" class="seats" value="E1"></td>
+    <td><input type="checkbox" class="seats" value="E2"></td>
+    <td><input type="checkbox" class="seats" value="E3"></td>
+    <td><input type="checkbox" class="seats" value="E4"></td>
+    <td><input type="checkbox" class="seats" value="E5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="E6"></td>
+    <td><input type="checkbox" class="seats" value="E7"></td>
+    <td><input type="checkbox" class="seats" value="E8"></td>
+    <td><input type="checkbox" class="seats" value="E9"></td>
+    <td><input type="checkbox" class="seats" value="E10"></td>
+    <td><input type="checkbox" class="seats" value="E11"></td>
+    <td><input type="checkbox" class="seats" value="E12"></td>
+</tr>
+  
+<tr class="seatVGap"></tr>
+  
+<tr>
+    <td>F</td>
+    <td><input type="checkbox" class="seats" value="F1"></td>
+    <td><input type="checkbox" class="seats" value="F2"></td>
+    <td><input type="checkbox" class="seats" value="F3"></td>
+    <td><input type="checkbox" class="seats" value="F4"></td>
+    <td><input type="checkbox" class="seats" value="F5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="F6"></td>
+    <td><input type="checkbox" class="seats" value="F7"></td>
+    <td><input type="checkbox" class="seats" value="F8"></td>
+    <td><input type="checkbox" class="seats" value="F9"></td>
+    <td><input type="checkbox" class="seats" value="F10"></td>
+    <td><input type="checkbox" class="seats" value="F11"></td>
+    <td><input type="checkbox" class="seats" value="F12"></td>
+</tr>
+  
+<tr>
+    <td>G</td>
+    <td><input type="checkbox" class="seats" value="G1"></td>
+    <td><input type="checkbox" class="seats" value="G2"></td>
+    <td><input type="checkbox" class="seats" value="G3"></td>
+    <td><input type="checkbox" class="seats" value="G4"></td>
+    <td><input type="checkbox" class="seats" value="G5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="G6"></td>
+    <td><input type="checkbox" class="seats" value="G7"></td>
+    <td><input type="checkbox" class="seats" value="G8"></td>
+    <td><input type="checkbox" class="seats" value="G9"></td>
+    <td><input type="checkbox" class="seats" value="G10"></td>
+    <td><input type="checkbox" class="seats" value="G11"></td>
+    <td><input type="checkbox" class="seats" value="G12"></td>
+</tr>
+  
+<tr>
+    <td>H</td>
+    <td><input type="checkbox" class="seats" value="H1"></td>
+    <td><input type="checkbox" class="seats" value="H2"></td>
+    <td><input type="checkbox" class="seats" value="H3"></td>
+    <td><input type="checkbox" class="seats" value="H4"></td>
+    <td><input type="checkbox" class="seats" value="H5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="H6"></td>
+    <td><input type="checkbox" class="seats" value="H7"></td>
+    <td><input type="checkbox" class="seats" value="H8"></td>
+    <td><input type="checkbox" class="seats" value="H9"></td>
+    <td><input type="checkbox" class="seats" value="H10"></td>
+    <td><input type="checkbox" class="seats" value="H11"></td>
+    <td><input type="checkbox" class="seats" value="H12"></td>
+</tr>
+  
+<tr>
+    <td>I</td>
+    <td><input type="checkbox" class="seats" value="I1"></td>
+    <td><input type="checkbox" class="seats" value="I2"></td>
+    <td><input type="checkbox" class="seats" value="I3"></td>
+    <td><input type="checkbox" class="seats" value="I4"></td>
+    <td><input type="checkbox" class="seats" value="I5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="I6"></td>
+    <td><input type="checkbox" class="seats" value="I7"></td>
+    <td><input type="checkbox" class="seats" value="I8"></td>
+    <td><input type="checkbox" class="seats" value="I9"></td>
+    <td><input type="checkbox" class="seats" value="I10"></td>
+    <td><input type="checkbox" class="seats" value="I11"></td>
+    <td><input type="checkbox" class="seats" value="I12"></td>
+</tr>
+  
+<tr>
+    <td>J</td>
+    <td><input type="checkbox" class="seats" value="J1"></td>
+    <td><input type="checkbox" class="seats" value="J2"></td>
+    <td><input type="checkbox" class="seats" value="J3"></td>
+    <td><input type="checkbox" class="seats" value="J4"></td>
+    <td><input type="checkbox" class="seats" value="J5"></td>
+    <td></td>
+    <td><input type="checkbox" class="seats" value="J6"></td>
+    <td><input type="checkbox" class="seats" value="J7"></td>
+    <td><input type="checkbox" class="seats" value="J8"></td>
+    <td><input type="checkbox" class="seats" value="J9"></td>
+    <td><input type="checkbox" class="seats" value="J10"></td>
+    <td><input type="checkbox" class="seats" value="J11"></td>
+    <td><input type="checkbox" class="seats" value="J12"></td>
+</tr>
+  
+  
+</table>
+  
+<br/>
+
+<p class="add_to_cart">
+                <a href="payment.html">Confirm Selection</a>
+
+</center>
+</div>
+      
+<br/><br/>
+
+<div class="displayerBoxes">
+<center>
+  <table class="Displaytable">
+  <tr>
+    <th>Name</th>
+    <th>Number of Seats</th>
+    <th>Seats</th>
+  </tr>
+  <tr>
+    <td><textarea id="nameDisplay"></textarea></td>
+    <td><textarea id="NumberDisplay"></textarea></td>
+    <td><textarea id="seatsDisplay"></textarea></td>
+  </tr>
+</table>
+</center>
+</div>
+
+<!--        <div class="sidebar_box"><span class="bottom"></span>
+            <h3>Weekly Special</h3>   
+            <div class="content special"> 
+                <img src="categories/Cart1_1.jpg" alt="Flowers" />
+                <a href="#">Citrus Burst Bouquet</a>
+                <p>
+                	Price:
+                    <span class="price normal_price">$15000</span>&nbsp;&nbsp;
+                    <span class="price special_price">$9000</span>
+                </p>
+            </div>
+        </div>-->
+    </div>
+    
+    
+		 
+        
+        
+        
+<!--        <div class="blank_box">
+        	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
+        </div>    -->
+    </div>
+    <div class="cleaner"></div>
+</div> <!-- END of main -->
+</div> <!-- END of main wrapper -->
+
+<div id="templatemo_footer_wrapper">
+<div id="templatemo_footer">
+	<div class="footer_left">
+    	<a href="#"><img src="images/1311260370_paypal-straight.png" alt="Paypal" /></a>
+        <a href="#"><img src="images/1311260374_mastercard-straight.png" alt="Master" /></a>
+        <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
+    </div>
+	<div class="footer">
+<!--		<p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About</a> | <a href="checkout.html">Checkout</a> | <a href="contact.html">Contact</a></p>-->
+        <p>Copyright © 2018 <a href="#">Developed by Sirish-Sowmith</a></p>
+	</div>
+    <div class="cleaner"></div>
+</div> <!-- END of footer -->
+</div> <!-- END of footer wrapper -->
+</div>
+
+</body>
+</html>

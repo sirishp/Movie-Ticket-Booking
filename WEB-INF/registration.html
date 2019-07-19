@@ -1,0 +1,211 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Show Time </title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="css/orman.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+
+
+</head>
+
+<body oncontextmenu="return false">
+
+<div id="templatemo_wrapper_h">
+<div id="templatemo_header_wh">
+	<div id="templatemo_header" class="header_home">
+    	<div id="site_title"><a href="#">Online Shopping</a></div>
+        <div id="templatemo_menu" class="ddsmoothmenu">
+            <ul>
+                <li><a href="index.html" class="selected">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+               
+            </ul>
+            <div id="templatemo_search">
+                <form action="#" method="get">
+                  	<input type="text" value="Site Search" name="keyword" id="keyword" title="keyword" 
+                  			onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                  	<input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn" />
+                </form>
+            </div>
+            <br style="clear: left" />
+        </div> <!-- end of templatemo_menu -->
+
+        <div class="slider-wrapper theme-orman">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+                <img src="images/portfolio/01.jpg" alt="slider image 1" />
+                <a href="#">
+                	<img src="images/portfolio/02.jpg" alt="slider image 2" title="This is an example of a caption" />
+                </a>
+                <img src="images/portfolio/03.jpg" alt="slider image 3" />
+                <img src="images/portfolio/04.jpg" alt="slider image 4" title="#htmlcaption" />
+                <img src="images/portfolio/5.jpg" alt="slider image 5" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>Example</strong> caption with <a href="http://dev7studios.com" rel="nofollow">a credit link</a> for <em>this slider</em>.
+            </div>
+        </div> 
+		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+        <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+				controlNav:false
+			});
+        });
+        </script>
+    </div> <!-- END of header -->
+</div> <!-- END of header wrapper -->
+<div id="templatemo_main_wrapper">
+<div id="templatemo_main">
+	<div id="sidebar" class="left">
+    	<div class="sidebar_box"><span class="bottom"></span>
+            <h3>Languages</h3>   
+            <div class="content"> 
+                <ul class="sidebar_list">
+                    
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Hindi</a></li>
+<li><a href="#">Telugu</a></li>
+<li><a href="#">Tamil</a></li>
+<li><a href="#">Malyalam</a></li>
+                  
+                </ul>
+            </div>
+<h3>Genre</h3>   
+            <div class="content"> 
+                <ul class="sidebar_list">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="#">Biography</a></li>   
+<li><a href="#">Comedy</a></li>
+<li><a href="#">Crime</a></li>
+<li><a href="#">Drama</a></li>
+<li><a href="#">Horror</a></li>
+<li><a href="#">Romance</a></li>
+<li><a href="#">Sci-fi</a></li>
+<li><a href="#">Thriller</a></li>
+               
+                </ul>
+            </div>
+        </div>
+<!--        <div class="sidebar_box"><span class="bottom"></span>
+            <h3>Weekly Special</h3>   
+            <div class="content special"> 
+                <img src="categories/Cart1_1.jpg" alt="Flowers" />
+                <a href="#">Citrus Burst Bouquet</a>
+                <p>
+                	Price:
+                    <span class="price normal_price">$15000</span>&nbsp;&nbsp;
+                    <span class="price special_price">$9000</span>
+                </p>
+            </div>
+        </div>-->
+    </div>
+    
+    <div id="content" class="right">
+    
+		<h2>Register</h2><br>
+		<center>
+		
+		<form action="/RegistrationServlet" method="post">
+<table>
+<tr>
+<td>User Id</td>
+<td><input type="text" name="uid"></td>
+</tr>
+
+<tr>
+<td>User Name</td>
+<td><input type="text" name="uname"></td>
+</tr>
+<tr>
+<td> Password</td>
+<td><input type="password" name="upwd"></td>
+</tr>
+<tr>
+<td>Email Id</td>
+<td><input type="text" name="emailId"></td>
+</tr>
+
+<tr>
+<td> Mobile Number</td>
+<td><input type="text" name="umbl"></td>
+</tr>
+
+
+<tr><th colspan="3">     &nbsp;&nbsp;&nbsp;
+<input type="submit" value="Register"></th></tr>
+					
+			</table>
+	
+		</form>
+		 
+		 </center>
+		 
+        
+        
+        
+<!--        <div class="blank_box">
+        	<a href="#"><img src="images/free_shipping.jpg" alt="Free Shipping" /></a>
+        </div>    -->
+    </div>
+    <div class="cleaner"></div>
+</div> <!-- END of main -->
+</div> <!-- END of main wrapper -->
+
+<div id="templatemo_footer_wrapper">
+<div id="templatemo_footer">
+	<div class="footer_left">
+    	<a href="#"><img src="images/1311260370_paypal-straight.png" alt="Paypal" /></a>
+        <a href="#"><img src="images/1311260374_mastercard-straight.png" alt="Master" /></a>
+        <a href="#"><img src="images/1311260374_visa-straight.png" alt="Visa" /></a>
+    </div>
+	<div class="footer">
+<!--		<p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About</a> | <a href="checkout.html">Checkout</a> | <a href="contact.html">Contact</a></p>-->
+        <p>Copyright © 2018 <a href="#">Developed by Sirish-Sowmith</a></p>
+	</div>
+    <div class="cleaner"></div>
+</div> <!-- END of footer -->
+</div> <!-- END of footer wrapper -->
+</div>
+
+</body>
+</html>
